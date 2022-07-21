@@ -14,12 +14,12 @@
 
 .sidebar {
     width: 80px;
-    font-size: 20px;
-    margin: 30px 30px;
+    font-size: 16px;
+    padding: 0 30px 30px 30px;
 }
 
 .button-pause {
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .button-pause button, .button-pause button:active {

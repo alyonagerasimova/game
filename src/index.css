@@ -1,4 +1,9 @@
 body {
-  font: 14px "Century Gothic", Futura, sans-serif;
-  margin: 20px;
+    font: 14px "Century Gothic", Futura, sans-serif;
+    margin: 20px;
+}
+
+.goToMenu {
+    font-size: 14px;
+    margin-bottom: 30px;
 }

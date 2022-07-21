@@ -4,6 +4,7 @@ import {Food} from "../food/Food";
 import {useEffect, useState} from "react";
 import useInterval from "../useInterval";
 import './GameSnake.css';
+import {Link} from "react-router-dom";
 
 function getRandomCoordinates() {
     let min = 1;
@@ -162,6 +163,9 @@ export function GameSnake() {
                 <Food dot={dotFood}/>
             </div>
             <div className="sidebar">
+                <div className="goToMenu">
+                    <Link to="/">На главную</Link>
+                </div>
                 <div className="score">
                     Счёт: {score}
                 </div>
