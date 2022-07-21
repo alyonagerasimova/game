@@ -1,6 +1,7 @@
-import {Square} from "./Square";
+import {Square} from "../square/Square";
+import './Board.css'
 
-export function Board(props){
+export function Board(props) {
     function renderSquare(i) {
         return <Square
             value={props.squares[i]}

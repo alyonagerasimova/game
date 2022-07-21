@@ -1,0 +1,5 @@
+.tile {
+transition-property: transform;
+    transition-duration: 100ms;
+    transform: scale(1);
+}

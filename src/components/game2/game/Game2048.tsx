@@ -1,10 +1,11 @@
-import {Board} from "./Board";
+import * as React from "react"
+import {Board} from "../board/Board";
 import {useState} from "react";
-import {calculateWinner} from "./calculateWinner";
-import './Game.css';
+import {calculateWinner} from "../../game1/calculateWinner";
+import './Game2048.css';
 import {Link} from "react-router-dom";
 
-export function Game() {
+export function Game2048() {
     const [history, setHistory] = useState([{
         squares: Array(9).fill(null),
     }]);
