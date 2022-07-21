@@ -7,10 +7,10 @@ import './GameSnake.css';
 import {Link} from "react-router-dom";
 
 function getRandomCoordinates() {
-    let min = 1;
-    let max = 98;
-    let x = Math.floor((Math.random() * (max - min + 1) + min) / 2) * 2;
-    let y = Math.floor((Math.random() * (max - min + 1) + min) / 2) * 2;
+    let min: number = 1;
+    let max: number = 98;
+    let x: number = Math.floor((Math.random() * (max - min + 1) + min) / 2) * 2;
+    let y: number = Math.floor((Math.random() * (max - min + 1) + min) / 2) * 2;
     return [x, y];
 }
 
@@ -73,7 +73,7 @@ export function GameSnake() {
     }
 
     function moveSnake() {
-        let dots = [...snakeDots];
+        let dots:  number[][] = [...snakeDots];
         let head: number[] = dots[dots.length - 1];
 
         switch (direction) {
@@ -113,15 +113,15 @@ export function GameSnake() {
     }
 
     function checkIfOutBounds() {
-        let head = snakeDots[snakeDots.length - 1];
+        let head: number[] = snakeDots[snakeDots.length - 1];
         if (head[0] < 0 || head[0] >= 100 || head[1] < 0 || head[1] >= 100) {
             gameOver();
         }
     }
 
     function checkIfCollapsed() {
-        let snake = [...snakeDots];
-        let head = snake[snake.length - 1];
+        let snake: number[][] = [...snakeDots];
+        let head: number[] = snake[snake.length - 1];
         snake.pop();
         snake.forEach(dot => {
             if (dot[0] === head[0] && dot[1] === head[1]) {
@@ -131,7 +131,7 @@ export function GameSnake() {
     }
 
     function enlargeSnake() {
-        let newSnake = [...snakeDots];
+        let newSnake: number[][] = [...snakeDots];
         newSnake.unshift([]);
         setSnakeDots(newSnake);
     }
@@ -143,7 +143,7 @@ export function GameSnake() {
     }
 
     function onEatFood() {
-        let head = snakeDots[snakeDots.length - 1];
+        let head:  number[] = snakeDots[snakeDots.length - 1];
         if (head[0] === dotFood[0] && head[1] === dotFood[1]) {
             increaseSpeed();
             enlargeSnake();
