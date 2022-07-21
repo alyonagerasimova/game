@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from "react-dom/client";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import App from './components/app/App';
-import {Game} from "./components/game1/game/Game";
-import {Game2048} from "./components/game2/game/Game2048";
+import {Game} from "./components/tic-tac-toe/game/Game";
+import {Game2048} from "./components/2048/game/Game2048";
 import './index.css';
-import {GameSnake} from "./components/game3/game/GameSnake";
+import {GameSnake} from "./components/Snake/game/GameSnake";
 
 const root = ReactDOM.createRoot(
     document.getElementById("root")

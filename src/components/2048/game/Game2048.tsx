@@ -1,7 +1,7 @@
 import * as React from "react"
 import {Board} from "../board/Board";
 import {useState} from "react";
-import {calculateWinner} from "../../game1/calculateWinner";
+import {calculateWinner} from "../../tic-tac-toe/calculateWinner";
 import './Game2048.css';
 import {Link} from "react-router-dom";
 
