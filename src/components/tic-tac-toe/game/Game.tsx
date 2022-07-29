@@ -1,8 +1,9 @@
+import React from "react";
 import {Board} from "../board/Board";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import {calculateWinner} from "../calculateWinner";
-import './Game.css';
 import {Link} from "react-router-dom";
+import './Game.css';
 
 export function Game() {
     let [history, setHistory] = useState([{

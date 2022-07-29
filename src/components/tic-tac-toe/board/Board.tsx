@@ -1,19 +1,25 @@
+import React from "react";
 import {Square} from "../square/Square";
 import './Board.css'
 import {calculateWinner} from "../calculateWinner";
 
-export function Board(props) {
+interface PropsType {
+    squares: any[],
+    onClick: (i: any) => void
+}
+
+export function Board({squares, onClick} : PropsType) {
 
     function renderSquare(i) {
-        let [winner, line] = calculateWinner(props.squares);
+        let [winner, line] = calculateWinner(squares);
         const style = {
             color: line[0] === i || line[1] === i || line[2] === i ? 'red' : 'black'
         }
 
         return <Square
-            value={props.squares[i]}
+            value={squares[i]}
             style={style}
-            onClick={() => props.onClick(i)}
+            onClick={() => onClick(i)}
         />;
     }
 
