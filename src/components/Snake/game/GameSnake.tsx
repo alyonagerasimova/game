@@ -47,7 +47,7 @@ export function GameSnake() {
 
     useInterval(() => {
         if (!stop) {
-            requestAnimationFrame(() => moveSnake());
+            window.requestAnimationFrame(() => moveSnake());
         }
     }, speed);
 

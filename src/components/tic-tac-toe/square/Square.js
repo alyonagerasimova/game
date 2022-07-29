@@ -2,7 +2,7 @@ import './Square.css';
 
 export function Square(props){
     return (
-        <button className="square" onClick={props.onClick}>
+        <button className='square' onClick={props.onClick} style={props.style}>
             {props.value}
         </button>
     )

@@ -7,20 +7,19 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-                <h1></h1>
+                <h1>Funny games</h1>
             </header>
             <div className="menu">
                 <nav>
                     <div>
-                        <Link to="game1">Крестики-нолики</Link>
+                        <Link to="tic-tac-toe" className='link-text'>Крестики-нолики</Link>
                     </div>
                     <div>
-                        <Link to="game2">2048</Link>
+                        <Link to="snake" className='link-text'>Змейка</Link>
                     </div>
                     <div>
-                        <Link to="game3">Змейка</Link>
+                        <Link to="./" className='link-text'>Выход</Link>
                     </div>
-                    <div>Выход</div>
                 </nav>
             </div>
         </div>
