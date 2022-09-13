@@ -11,14 +11,11 @@ function App() {
             </header>
             <div className="menu">
                 <nav>
-                    <div>
-                        <Link to="tic-tac-toe" className='link-text'>Крестики-нолики</Link>
+                    <div className="menu__item">
+                        <Link to="tic-tac-toe" className='link-text' >Крестики-нолики</Link>
                     </div>
-                    <div>
+                    <div className="menu__item">
                         <Link to="snake" className='link-text'>Змейка</Link>
-                    </div>
-                    <div>
-                        <Link to="./" className='link-text'>Выход</Link>
                     </div>
                 </nav>
             </div>
