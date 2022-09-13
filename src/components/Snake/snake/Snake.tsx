@@ -1,11 +1,15 @@
 import * as React from "react"
 import './Snake.css'
 
-export function Snake(props) {
+interface PropsType {
+    snakeDots: number[][],
+}
+
+export function Snake({snakeDots}: PropsType) {
 
     return (
         <div>
-            {props.snakeDots.map((dot, i) => {
+            {snakeDots.map((dot, i) => {
                 const style = {
                     left: `${dot[0]}%`,
                     top: `${dot[1]}%`

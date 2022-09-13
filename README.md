@@ -1,3 +1,4 @@
 # The Browser Games project
 ## About
-Some browser apps
+- Tic-tac-toe
+- Snake
