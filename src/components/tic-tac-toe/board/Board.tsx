@@ -11,7 +11,7 @@ interface PropsType {
 export function Board({squares, onClick} : PropsType) {
 
     function renderSquare(i) {
-        let [winner, line] = calculateWinner(squares);
+        const [, line] = calculateWinner(squares);
         const style = {
             color: line[0] === i || line[1] === i || line[2] === i ? 'red' : 'black'
         }

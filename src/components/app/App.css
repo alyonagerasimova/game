@@ -1,11 +1,11 @@
 .App {
     text-align: center;
     font-family: Arial, serif;
-    background: linear-gradient(#001c42, #527274);
-    background-size: 100%;
+    background: url("../../assets/фон.png");
     height: 100%;
     width: 100%;
     position: absolute;
+    padding: 20px 0;
 }
 
 .App-header {
@@ -14,8 +14,8 @@
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 1vmin);
-    color: #f6f6f6;
-    text-shadow: 0 0 5px #fff;
+    color: #ffffff;
+    text-shadow: 0 1px 1px #ffffff;
 }
 
 .menu {
@@ -31,18 +31,43 @@
 
 .menu__item{
     padding: 20px 10px;
+    border-radius: 10px;
 }
 
 .link-text {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
-    text-shadow: 0 0 1px #fff,
-    0 0 2px #fff,
-    0 0 5px #fff,
-    0 0 11px #00ffd9,
-    0 0 20px #00ffd9,
-    0 0 30px #00ffd9,
-    0 0 55px #00ffd9,
-    0 0 80px #00ffd9;
+    font-size: 35px;
+    text-align: center;
+    margin-top: 0;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 10px;
+    font-family: Century Gothic, serif;
+    letter-spacing: 5px;
+}
+
+.link-text:hover{
+    color: black;
+}
+.menu__item:nth-child(odd){
+    transform: perspective(400px) rotateY(45deg);
+    box-shadow: -2px 2px 7px gray;
+    margin-bottom: 20px;
+    background-color: burlywood;
+}
+.menu__item:nth-child(even){
+    transform: perspective(400px) rotateY(-45deg);
+    box-shadow: 2px 2px 7px gray;
+    background-color: #23b56d;
+}
+.menu__item:hover{
+    transform: rotateY(0);
+    color: black;
+    box-shadow: 0 0 0;
+    background-color: rgba(255, 255, 255, 0);
+}
+.menu__item:hover .link-text {
+    color: black;
 }

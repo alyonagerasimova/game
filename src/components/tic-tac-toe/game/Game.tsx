@@ -4,9 +4,10 @@ import {useState} from "react";
 import {calculateWinner} from "../calculateWinner";
 import {Link} from "react-router-dom";
 import './Game.css';
+import {routes} from "../../../utils/routes";
 
 export function Game() {
-    let [history, setHistory] = useState([{
+    const [history, setHistory] = useState([{
         squares: Array(9).fill(null),
     }]);
     const [xIsNext, setXIsNext] = useState(true);
@@ -22,7 +23,7 @@ export function Game() {
         const newHistory = history.slice(0, stepNumber + 1);
         const current = newHistory[newHistory.length - 1];
         const squares = current.squares.slice();
-        const [winner, line] = calculateWinner(squares);
+        const [winner] = calculateWinner(squares);
         if (winner || squares[i]) {
             return;
         }
@@ -53,7 +54,7 @@ export function Game() {
     }
 
     const current = history[stepNumber];
-    const [winner, line] = calculateWinner(current.squares);
+    const [winner] = calculateWinner(current.squares);
 
     if (winner) {
         status = 'Победитель: ' + winner;
@@ -72,7 +73,7 @@ export function Game() {
             </div>
             <div className="navbar">
                 <div className="goToMenu">
-                    <Link to="/">На главную</Link>
+                    <Link to={routes.HOME}>На главную</Link>
                 </div>
                 <div className="game-info">
                     <div className="text-status">{status}</div>

@@ -5,12 +5,13 @@ import {useEffect, useState} from "react";
 import useInterval from "../useInterval";
 import './GameSnake.css';
 import {Link} from "react-router-dom";
+import {routes} from "../../../utils/routes";
 
 function getRandomCoordinates() {
-    let min = 1;
-    let max = 98;
-    let x: number = Math.floor((Math.random() * (max - min + 1) + min) / 2) * 2;
-    let y: number = Math.floor((Math.random() * (max - min + 1) + min) / 2) * 2;
+    const min = 1;
+    const max = 98;
+    const x: number = Math.floor((Math.random() * (max - min + 1) + min) / 2) * 2;
+    const y: number = Math.floor((Math.random() * (max - min + 1) + min) / 2) * 2;
     return [x, y];
 }
 
@@ -73,7 +74,7 @@ export function GameSnake() {
     }
 
     function moveSnake() {
-        let dots:  number[][] = [...snakeDots];
+        const dots:  number[][] = [...snakeDots];
         let head: number[] = dots[dots.length - 1];
 
         switch (direction) {
@@ -113,15 +114,15 @@ export function GameSnake() {
     }
 
     function checkIfOutBounds() {
-        let head: number[] = snakeDots[snakeDots.length - 1];
+        const head: number[] = snakeDots[snakeDots.length - 1];
         if (head[0] < 0 || head[0] >= 100 || head[1] < 0 || head[1] >= 100) {
             gameOver();
         }
     }
 
     function checkIfCollapsed() {
-        let snake: number[][] = [...snakeDots];
-        let head: number[] = snake[snake.length - 1];
+        const snake: number[][] = [...snakeDots];
+        const head: number[] = snake[snake.length - 1];
         snake.pop();
         snake.forEach(dot => {
             if (dot[0] === head[0] && dot[1] === head[1]) {
@@ -131,7 +132,7 @@ export function GameSnake() {
     }
 
     function enlargeSnake() {
-        let newSnake: number[][] = [...snakeDots];
+        const newSnake: number[][] = [...snakeDots];
         newSnake.unshift([]);
         setSnakeDots(newSnake);
     }
@@ -143,7 +144,7 @@ export function GameSnake() {
     }
 
     function onEatFood() {
-        let head:  number[] = snakeDots[snakeDots.length - 1];
+        const head:  number[] = snakeDots[snakeDots.length - 1];
         if (head[0] === dotFood[0] && head[1] === dotFood[1]) {
             increaseSpeed();
             enlargeSnake();
@@ -164,7 +165,7 @@ export function GameSnake() {
             </div>
             <div className="sidebar">
                 <div className="goToMenu">
-                    <Link to="/">На главную</Link>
+                    <Link to={routes.HOME}>На главную</Link>
                 </div>
                 <div className="score">
                     Счёт: {score}

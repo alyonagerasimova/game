@@ -1,6 +1,7 @@
 import * as React from "react"
 import './App.css';
 import {Link} from "react-router-dom";
+import {routes} from "../../utils/routes";
 
 
 function App() {
@@ -12,10 +13,10 @@ function App() {
             <div className="menu">
                 <nav>
                     <div className="menu__item">
-                        <Link to="tic-tac-toe" className='link-text' >Крестики-нолики</Link>
+                        <Link to={routes.TTT} className='link-text' >Крестики-нолики</Link>
                     </div>
                     <div className="menu__item">
-                        <Link to="snake" className='link-text'>Змейка</Link>
+                        <Link to={routes.SNAKE} className='link-text'>Змейка</Link>
                     </div>
                 </nav>
             </div>
