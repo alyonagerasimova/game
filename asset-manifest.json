@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/game/static/css/main.b6249289.css",
+    "main.css": "/game/static/css/main.54638d60.css",
     "main.js": "/game/static/js/main.62b054d6.js",
     "static/media/фон.png": "/game/static/media/фон.0b754518de6c74627230.png",
     "index.html": "/game/index.html",
-    "main.b6249289.css.map": "/game/static/css/main.b6249289.css.map",
+    "main.54638d60.css.map": "/game/static/css/main.54638d60.css.map",
     "main.62b054d6.js.map": "/game/static/js/main.62b054d6.js.map"
   },
   "entrypoints": [
-    "static/css/main.b6249289.css",
+    "static/css/main.54638d60.css",
     "static/js/main.62b054d6.js"
   ]
 }
